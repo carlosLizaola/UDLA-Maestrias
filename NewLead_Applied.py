@@ -23,7 +23,7 @@ class UdlaTest(unittest.TestCase):
         currentTypeAccount.select_by_visible_text("UDLA MAESTRÍAS")
 
         email = driver.find_element(By.CSS_SELECTOR, 'input[formcontrolname="email"]')
-        email.send_keys("test.2024110708@aplatam.test")
+        email.send_keys("test.2024120101@aplatam.test")
 
         password = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[formcontrolname="password"]')))
         password.send_keys("Test.123")
