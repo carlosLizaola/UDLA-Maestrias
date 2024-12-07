@@ -23,7 +23,7 @@ class UdlaTest(unittest.TestCase):
         currentTypeAccount.select_by_visible_text("UDLA MAESTRÍAS")
 
         email = driver.find_element(By.CSS_SELECTOR, 'input[formcontrolname="email"]')
-        email.send_keys("test.2024120104@aplatam.test")
+        email.send_keys("test.2024120108@aplatam.test")
 
         password = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[formcontrolname="password"]')))
         password.send_keys("Test.123")
@@ -174,7 +174,7 @@ class UdlaTest(unittest.TestCase):
         month3 = Select(selectMonth3)
         month3.select_by_visible_text("Octubre")
 
-        driver.find_element(By.XPATH, "(//div[contains(.,'1')])[31]").click()
+        driver.find_element(By.XPATH, "(//div[contains(@class,'btn-light ng-star-inserted')])[1]").click()
 
         otherStudy = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[id="ACADEMIC_DATA_otherStudy"]')))
         otherStudy.send_keys("No")
